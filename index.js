@@ -11,6 +11,13 @@ app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 app.use(cors())
 
+app.get('/api/categories', require('./controllers/get_categories'))
+app.get('/api/users', require('./controllers/get_users'))
+
+app.post('/api/signup', require('./controllers/post_user'))
+app.post('/api/products', require('./controllers/post_products'))
+
+
 app.listen(process.env.PORT, (err) => {
     if (err) {
     console.log('ERROR', err)
