@@ -16,7 +16,7 @@ app.get('/api/users', require('./controllers/get_users'))
 
 app.post('/api/signup', require('./controllers/post_user'))
 app.post('/api/products', require('./controllers/post_products'))
-
+app.post('/api/login', require('./controllers/login'))
 
 app.listen(process.env.PORT, (err) => {
     if (err) {
