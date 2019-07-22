@@ -26,6 +26,6 @@ module.exports = (req, res) => {
             res.send('Email not found')
         }
     }).catch((err) => {
-        res.status(300).send(err)
+        res.status(300).send('err!!!', err)
     })
 }
