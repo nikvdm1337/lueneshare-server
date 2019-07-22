@@ -1,6 +1,6 @@
 const db = require('../db')
 
-const db_category = db.model('channel', {
+const db_category = db.model('category', {
     name: String,
 })
 
