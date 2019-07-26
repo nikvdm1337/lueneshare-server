@@ -15,10 +15,10 @@ const db_product = db.model('products', {
         ref: 'categories',
 		required: [true, 'Category is required']
     },
-    user: {
+    author: {
         type: mongoose.Schema.Types.ObjectId,
-        ref: 'users',
-        required: [true, 'Category is required']
+        ref: 'user',
+        required: [true, 'User is required']
     },
     image: {
         type: String,

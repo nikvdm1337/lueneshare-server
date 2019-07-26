@@ -12,7 +12,7 @@ module.exports = (req, res) => {
 			db_product.create(req.body).then((data) => {
 				db_product.findById(data._id)
 					.populate({
-						path: 'name',
+						path: 'author',
 						select: 'name'
 					}).populate({
 						path: 'category',
