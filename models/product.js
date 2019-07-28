@@ -12,7 +12,7 @@ const db_product = db.model('products', {
 	},
 	category: {
         type: mongoose.Schema.Types.ObjectId,
-        ref: 'categories',
+        ref: 'category',
 		required: [true, 'Category is required']
     },
     author: {
