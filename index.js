@@ -13,6 +13,7 @@ app.use(cors())
 
 app.get('/api/categories', require('./controllers/get_categories'))
 app.get('/api/users', require('./controllers/get_users'))
+app.get('/api/products', require('./controllers/get_products'))
 
 app.post('/api/signup', require('./controllers/post_user'))
 app.post('/api/products', require('./controllers/post_products'))
