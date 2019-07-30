@@ -15,10 +15,12 @@ app.get('/api/categories', require('./controllers/get_categories'))
 app.get('/api/users', require('./controllers/get_users'))
 app.get('/api/products', require('./controllers/get_products'))
 app.get('/api/messages', require('./controllers/get_messages'))
+app.get('/api/profile', require('./controllers/get_profile'))
 
 app.post('/api/signup', require('./controllers/post_user'))
 app.post('/api/products', require('./controllers/post_products'))
 app.post('/api/login', require('./controllers/login'))
+app.post('/api/messages', require ('./controllers/post_message'))
 
 app.listen(process.env.PORT, (err) => {
     if (err) {
