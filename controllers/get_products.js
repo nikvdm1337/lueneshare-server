@@ -2,7 +2,7 @@ const db_products = require('../models/product')
 
 module.exports = (req, res) => {
 	let q = {}
-	console.log('asdsad', req.query)
+	//console.log(req.query)
 	if (req.query && req.query.category) {
 		q.category = req.query.category
 	}
