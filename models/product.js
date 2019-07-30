@@ -25,7 +25,7 @@ const db_product = db.model('products', {
     },
     date: {
         type: Date,
-        default: Date.now()
+        default: Date.now
     }
 })
 
