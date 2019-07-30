@@ -12,6 +12,13 @@ const db_user = db.model('user', {
 	password: {
 		type: String,
 		required: [true, 'User Password is required']
+	},
+	city: {
+		type: String,
+		required: [true, 'City is required']
+	},
+	profilepic: {
+		type: String,
 	}
 })
 
