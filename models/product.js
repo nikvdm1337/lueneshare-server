@@ -20,7 +20,7 @@ const db_product = db.model('products', {
         ref: 'user',
         required: [true, 'User is required']
     },
-    image: {
+    file: {
         type: String,
     },
     date: {

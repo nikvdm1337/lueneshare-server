@@ -17,7 +17,7 @@ const db_user = db.model('user', {
 		type: String,
 		required: [true, 'City is required']
 	},
-	profilepic: {
+	file: {
 		type: String,
 	}
 })
