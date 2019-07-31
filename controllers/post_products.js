@@ -48,6 +48,7 @@ const create_product = (body) => {
 }
 
 module.exports = (req, res) => {
+	console.log('reqfile',req.file)
 	// token
 	let token = req.headers.authorization.split(' ')[1]
 	jwt.verify(token, process.env.SECRET, (err, decoded) => {
@@ -56,10 +57,11 @@ module.exports = (req, res) => {
 			// file
 			if (req.file && req.file != null) {
 				upload_file(req.file).then((file) => {
+					console.log('file', file)
 					req.body.file = file.url
 					// message with file
-					create_product(req.body).then((message) => {
-						res.send(message)
+					create_product(req.body).then((product) => {
+						res.send(product)
 					}).catch((err) => {
 						res.send(err)
 					})
