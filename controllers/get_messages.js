@@ -9,8 +9,8 @@ module.exports = (req, res) => {
 		path: 'category',
 		select: 'name'
 	}).populate({
-		path: 'user',
-		select: 'name email'
+		path: 'author',
+		select: 'name'
 	}).then((data) => {
 		res.send(data)
 	}).catch((err) => {
