@@ -11,7 +11,6 @@ app.use(cors({credentials:true}))
 app.use(bodyParser.urlencoded({ extended: false }))
 // parse application/json
 app.use(bodyParser.json())
-app.use(cors())
 
 app.get('/api/categories', require('./controllers/get_categories'))
 app.get('/api/users', require('./controllers/get_users'))
