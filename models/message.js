@@ -15,8 +15,10 @@ const db_message = db.model('message', {
 		type: String,
 		required: [true, 'Message Body is required']
 	},
-	currentProduct: {
-		type: String,
+	product: {
+		type: mongoose.Schema.Types.ObjectId,
+		ref: 'product',
+		required: [true, 'Product is required']
 	}
 })
 
