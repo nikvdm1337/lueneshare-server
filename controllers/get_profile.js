@@ -6,7 +6,8 @@ module.exports = (req, res) => {
 	
 	jwt.verify(token, process.env.SECRET, (err, decoded) => {
 		if (decoded) {
-			res.json({email: decoded.email, city:decoded.city, name:decoded.name, profilepic:decoded.profilepic})
+			delete decoded.password
+			res.json(decoded)
 		} else {
             res.send(err)
         }
