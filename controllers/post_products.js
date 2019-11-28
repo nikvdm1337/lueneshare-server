@@ -55,9 +55,10 @@ module.exports = (req, res) => {
 		if (decoded) {
 			req.body.author = decoded._id
 			// file
-			if (req.file && req.file != null) {
+			if (req.file && req.file != null && req.file.mimetype === "image/jpeg") {
 				upload_file(req.file).then((file) => {
 					console.log('file', file)
+					console.log("mimetype", req.file.mimetype)
 					req.body.file = file.url
 					// message with file
 					create_product(req.body).then((product) => {

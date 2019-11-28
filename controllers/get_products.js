@@ -9,7 +9,6 @@ module.exports = (req, res) => {
 		path: 'author',
 		select: 'name'
 	}).then((data) => {
-		console.log('data', data)
 		res.send(data)
 	}).catch((err) => {
 		res.send(err)
